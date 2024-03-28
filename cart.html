@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--divinectorweb.com-->
+<head>
+    <meta charset="UTF-8">
+    <title>Responsive Shopping Cart design</title>
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<!-- khalti static link -->
+	<script src="https://khalti.s3.ap-south-1.amazonaws.com/KPG/dist/2020.12.17.0.0.0/khalti-checkout.iffe.js"></script>
+	<link href="style.css" rel="stylesheet">
+</head>
+<body>
+	<script>
+        var config = {
+            // replace the publicKey with yours
+            "publicKey": "test_public_key_dc74e0fd57cb46cd93832aee0a390234",
+            "productIdentity": "1234567890",
+            "productName": "Dragon",
+            "productUrl": "http://gameofthrones.wikia.com/wiki/Dragons",
+            "paymentPreference": [
+                "KHALTI",
+                "EBANKING",
+                "MOBILE_BANKING",
+                "CONNECT_IPS",
+                "SCT",
+                ],
+            "eventHandler": {
+                onSuccess (payload) {
+                    // hit merchant api for initiating verfication
+                    console.log(payload);
+                },
+                onError (error) {
+                    console.log(error);
+                },
+                onClose () {
+                    console.log('widget is closing');
+                }
+            }
+        };
+
+        var checkout = new KhaltiCheckout(config);
+        var btn = document.getElementById("payment-button");
+        btn.onclick = function () {
+            // minimum transaction amount must be 10, i.e 1000 in paisa.
+            checkout.show({amount: 1000});
+        }
+    </script>
+    <div class="wrapper">
+		<h1>Shopping Cart</h1>
+		<div class="project">
+			<div class="shop">
+				<div class="box">
+					<img src="Images/Book1.jpg">
+					<div class="content">
+						<h3>Women Lipsticks</h3>
+						<h4>Price: $40</h4>
+						<p class="unit">Quantity: <input name="" value="1"></p>
+						<p class="btn-area"><i aria-hidden="true" class="fa fa-trash"></i> <span class="btn2">Remove</span></p>
+					</div>
+				</div>
+				<div class="box">
+					<img src="2.jpg">
+					<div class="content">
+						<h3>Man's Watches</h3>
+						<h4>Price: $40</h4>
+						<p class="unit">Quantity: <input name="" value="1"></p>
+						<p class="btn-area"><i aria-hidden="true" class="fa fa-trash"></i> <span class="btn2">Remove</span></p>
+					</div>
+				</div>
+				<div class="box">
+					<img src="3.jpg">
+					<div class="content">
+						<h3>Samsung Mobile</h3>
+						<h4>Price: $250</h4>
+						<p class="unit">Quantity: <input name="" value="0"></p>
+						<p class="btn-area"><i aria-hidden="true" class="fa fa-trash"></i> <span class="btn2">Remove</span></p>
+					</div>
+				</div>
+			</div>
+			<div class="right-bar">
+				<p><span>Subtotal</span> <span>$120</span></p>
+				<hr>
+				<p><span>Tax (5%)</span> <span>$6</span></p>
+				<hr>
+				<p><span>Shipping</span> <span>$15</span></p>
+				<hr>
+				<p><span>Total</span> <span>$141</span></p><a href="#"><i class="fa fa-shopping-cart"></i>Checkout</a>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

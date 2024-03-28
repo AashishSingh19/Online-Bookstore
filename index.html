@@ -1,0 +1,525 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Book Store</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <link rel='stylesheet' href="login.css">
+
+</head>
+<body>
+    
+<!-- header section starts  -->
+
+<header class="header">
+
+    <a href="#" class="logo"> <i class="fas fa-book"></i> BookThings </a>
+
+    <nav class="navbar">
+        <a href="#home">home</a>
+        <a href="#products">books</a>
+        <a href="#featured">featured</a>
+        <a href="#contact">contact</a>
+        <button class="button">Login</button>
+    </nav>
+
+    <div class="icons">
+        <div id="menu-btn" class="fas fa-bars"></div>
+        <div id="search-btn" class="fas fa-search"></div>
+        <a href="cart.php" class="fas fa-shopping-cart"></a>
+        <a href="#" class="fas fa-heart"></a>
+        <a href="file.html" class="fas fa-sign-in-alt"></a>
+        
+    </div>
+
+    <form action="" class="search-form">
+        <input type="search" name="" placeholder="Search here..." id="search-box">
+        <label for="search-box" class="fas fa-search"></label>
+    </form>
+
+</header>
+
+<!-- header section ends -->
+
+<!-- home section starts  -->
+
+<section class="home" id="home">
+    <div class="form-container">
+        <i class="uil uil-times form_close"></i>
+        <div class="form login_form">
+          <form action="">
+            <h2>Login</h2>
+            
+            <div class="input input_box">
+              <input type="email" placeholder="Enter your email">
+              <i class="uil uil-envelope-alt email"></i>
+            </div>
+    
+            <div class="input input_box">
+              <input type="password" placeholder="Enter your password">
+              <i class="uil uil-lock password"></i>
+              <i class="uil uil-eye-slash pw-hide"></i>
+            </div>
+            <div class="option_field">
+              <span class="checkbox">
+                <input type="checkbox" id="check">
+                <label for="check">Remember Me</label>
+              </span>
+              <a href="#" class="forgot_pass">Forgot Password</a>
+            </div>
+    
+            <button class="button" id="form-open">Login Now</button>
+    
+            <div class="login_signup">
+              Don't have an account ? <a href="" id="signup">SignUp</a>
+            </div>
+          </form>
+        </div>
+    
+        <div class="form signup_form">
+          <form action="">
+            <h2>Sign Up</h2>
+            
+            <div class="input input_box">
+              <input type="email" placeholder="Enter your name">
+              <i class="uil uil-user name"></i>
+            </div>
+    
+            <div class="input input_box">
+              <input type="email" placeholder="Enter your email">
+              <i class="uil uil-envelope-alt email"></i>
+            </div>
+    
+            <div class="input input_box">
+              <input type="password" placeholder="Enter your password">
+              <i class="uil uil-lock password"></i>
+              <i class="uil uil-eye-slash pw-hide"></i>
+            </div>
+    
+            <div class="input input_box">
+              <input type="password" placeholder="Confirm your password">
+              <i class="uil uil-lock password"></i>
+              <i class="uil uil-eye-slash pw-hide"></i>
+            </div>
+    
+            <button class="button">Sign Up</button>
+    
+            <div class="login_signup">
+              Already have an account ? <a href="" id="login">Login</a>
+            </div>
+          </form>
+        </div>
+      </div>
+
+    <div class="swiper home-slider">
+
+        <div class="wrapper">
+
+            <div class="swiper-slide slide" style="background:url(Images/banner.jpg) no-repeat">
+                <div class="content">
+                    <h3>Welcome</h3>
+                    <span>A room without book is like a body without soul</span><br>
+                    <a href="#" class="btn">Browse</a>
+                </div>
+            </div>              
+        </div>
+
+    </div>
+
+</section>
+
+<!-- home section ends -->
+
+<!-- products section starts  -->
+
+<section class="products" id="products">
+
+    <h1 class="heading"> exclusive <span>books</span> </h1>
+
+    <div class="filter-buttons">
+        <div class="buttons active" data-filter="all">all</div>
+        <div class="buttons" data-filter="arrivals">new arrivals</div>
+        <div class="buttons" data-filter="featured">featured</div>
+        <div class="buttons" data-filter="special">special offer</div>
+        <div class="buttons" data-filter="seller">best seller</div>
+    </div>
+
+    <div class="box-container">
+
+
+    <div class="box" data-item="featured">
+        <div class="icons">
+            <a href="#" class="fas fa-shopping-cart" onclick="addToCart()"></a>
+            <a href="#" class="fas fa-heart"></a>
+            <a href="#" class="fas fa-eye"></a>
+        </div>
+        <div class="image">
+            <img src="Images/Book1_375x600.jpeg" alt="">
+        </div>
+        <div class="content">
+            <h3>Things We Hide Form The Light</h3>
+            <div class="price">
+                <div class="amount">Rs.400.00</div>
+            </div>
+        </div>
+    </div>
+        <div class="box" data-item="special">
+            <div class="icons">
+                <a href="#" class="fas fa-shopping-cart"  onclick="addToCart()"></a>
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-eye"></a>
+            </div>
+            <div class="image">
+                <img src="Images/Book2.jpg" alt="" width="540" height="600">
+            </div>
+            <div class="content">
+                <h3>The Book Thief</h3>
+                <div class="price">
+                    <div class="amount">Rs.400.00</div>
+                    <!-- <div class="cut">Rs.800.00</div>
+                    <div class="offer">50% off</div> -->
+                </div>
+            </div>
+        </div>
+
+        <div class="box" data-item="seller">
+            <div class="icons">
+                <a href="#" class="fas fa-shopping-cart"  onclick="addToCart()"></a>
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-eye"></a>
+            </div>
+            <div class="image">
+                <img src="Images/Book3.jpg" alt="">
+            </div>
+            <div class="content">
+                <h3>Every Summer After</h3>
+                <div class="price">
+                    <div class="amount">Rs.400.00</div>
+                    <!-- <div class="cut">Rs.800.00</div>
+                    <div class="offer">50% off</div> -->
+                </div>
+            </div>
+        </div>
+
+        <div class="box" data-item="arrivals">
+            <div class="icons">
+                <a href="#" class="fas fa-shopping-cart"  onclick="addToCart()"></a>
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-eye"></a>
+            </div>
+            <div class="image">
+                <img src="Images/Book4_377x600.jpg" alt="">
+            </div>
+            <div class="content">
+                <h3>It Ends With Us</h3>
+                <div class="price">
+                    <div class="amount">Rs.400.00</div>
+                    <!-- <div class="cut">Rs.800.00</div>
+                    <div class="offer">50% off</div> -->
+                </div>
+            </div>
+        </div>
+
+        <div class="box" data-item="featured">
+            <div class="icons">
+                <a href="#" class="fas fa-shopping-cart"  onclick="addToCart()"></a>
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-eye"></a>
+            </div>
+            <div class="image">
+                <img src="Images/Book5.jpg" alt="">
+            </div>
+            <div class="content">
+                <h3>Ugly Love</h3>
+                <div class="price">
+                    <div class="amount">Rs.400.00</div>
+                    <!-- <div class="cut">Rs.800.00</div>
+                    <div class="offer">50% off</div> -->
+                </div>
+            </div>
+        </div>
+
+        <div class="box" data-item="arrivals">
+            <div class="icons">
+                <a href="#" class="fas fa-shopping-cart"  onclick="addToCart()"></a>
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-eye"></a>
+            </div>
+            <div class="image">
+                <img src="Images/Book6.jpg" alt="">
+            </div>
+            <div class="content">
+                <h3>Girl In Pieces</h3>
+                <div class="price">
+                    <div class="amount">Rs.400.00</div>
+                    <!-- <div class="cut">Rs.800.00</div>
+                    <div class="offer">50% off</div> -->
+                </div>
+            </div>
+        </div>
+
+        <div class="box" data-item="special">
+            <div class="icons">
+                <a href="#" class="fas fa-shopping-cart"  onclick="addToCart()"></a>
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-eye"></a>
+            </div>
+            <div class="image">
+                <img src="Images/Book8.jpg" alt="">
+            </div>
+            <div class="content">
+                <h3>Essentialism</h3>
+                <div class="price">
+                    <div class="amount">Rs.400.00</div>
+                    <!-- <div class="cut">Rs.800.00</div>
+                    <div class="offer">50% off</div> -->
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- products section ends -->
+
+<!-- featured section starts  -->
+
+<section class="featured" id="featured">
+
+    <h1 class="heading"> <span>featured</span> products </h1>
+
+    <div class="swiper featured-slider">
+        
+        <div class="swiper-wrapper">
+
+            <div class="swiper-slide slide">
+                <div class="icons">
+                    <a href="#" class="fas fa-shopping-cart"  onclick="addToCart()"></a>
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="Images/Book1.jpg" alt="">
+                </div>
+                <div class="content">
+                    <h3>Things We Hide From The Light</h3>
+                    <div class="price">
+                        <div class="amount">Rs.400.00</div>
+                    <!-- <div class="cut">Rs.800.00</div>
+                    <div class="offer">50% off</div> -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-slide slide">
+                <div class="icons">
+                    <a href="#" class="fas fa-shopping-cart"  onclick="addToCart()"></a>
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="Images/Book3.jpg" alt="">
+                </div>
+                <div class="content">
+                    <h3>Every Summer After</h3>
+                    <div class="price">
+                        <div class="amount">Rs.400.00</div>
+                    <!-- <div class="cut">Rs.800.00</div>
+                    <div class="offer">50% off</div> -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-slide slide">
+                <div class="icons">
+                    <a href="#" class="fas fa-shopping-cart"  onclick="addToCart()"></a>
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="Images/Book5.jpg" alt="">
+                </div>
+                <div class="content">
+                    <h3>Ugly Love</h3>
+                    <div class="price">
+                        <div class="amount">Rs.400.00</div>
+                    <!-- <div class="cut">Rs.800.00</div>
+                    <div class="offer">50% off</div> -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-slide slide">
+                <div class="icons">
+                    <a href="#" class="fas fa-shopping-cart"  onclick="addToCart()"></a>
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="Images/Book8.jpg" alt="">
+                </div>
+                <div class="content">
+                    <h3>Essentialism</h3>
+                    <div class="price">
+                        <div class="amount">Rs.400.00</div>
+                        <!-- <div class="cut">Rs.800.00</div>
+                        <div class="offer">50% off</div> -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-slide slide">
+                <div class="icons">
+                    <a href="#" class="fas fa-shopping-cart"  onclick="addToCart()"></a>
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="Images/Book4_377x600.jpg" alt="">
+                </div>
+                <div class="content">
+                    <h3>It Ends With Us</h3>
+                    <div class="price">
+                        <div class="amount">Rs.400.00</div>
+                        <!-- <div class="cut">Rs.800.00</div>
+                        <div class="offer">50% off</div> -->
+                    </div>
+                </div>
+            </div>
+
+            
+
+        </div>
+
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+
+    </div>
+
+</section>
+</form>
+
+<!-- featured section ends -->
+
+<!-- contact section starts  -->
+
+<section class="contact" id="contact">
+
+    <h1 class="heading"> <span>contact</span> us </h1>
+
+    <div class="icons-container">
+
+        <div class="icons">
+            <i class="fas fa-map-marker-alt"></i>
+            <h3>address</h3>
+            <p>Nhoosa Marg, Kathmandu 44600</p>
+        </div>
+
+        <div class="icons">
+            <i class="fas fa-envelope"></i>
+            <h3>email</h3>
+            <p>bookthings@gmail.com</p>
+        </div>
+
+        <div class="icons">
+            <i class="fas fa-phone"></i>
+            <h3>phone</h3>
+            <p>+9779841234567</p>
+        </div>
+
+    </div>
+
+    <div class="row">
+
+        <form action="">
+            <h3>Subscribe To Our Newsletter</h3>
+            <div>
+                
+            </div>
+            <div class="inputBox">
+                <input type="name" placeholder="Your Name">
+                <input type="email" placeholder="Your Email">
+            </div>
+            <input type="submit" value="Subscribe" class="btn">
+        </form>
+
+        <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d441.5593749949761!2d85.30833941656935!3d27.702616819082234!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1932ff24afc1%3A0xd61489cc96129a4c!2sBookthings!5e0!3m2!1sen!2snp!4v1684398042411!5m2!1sen!2snp" allowfullscreen="" loading="lazy"></iframe>
+
+    </div>
+
+</section>
+
+<!-- contact section ends -->
+
+<!-- footer section starts  -->
+
+<section class="footer">
+
+    <div class="box-container">
+
+        <div class="box">
+            <h3>about us</h3>
+            <p>Founded in 2023, our mission is to make the joy of reading accessible to everyone, offering a vast range of genres, from timeless classics to contemporary bestsellers, from thought-provoking non-fiction.</p>
+        </div>
+
+        <div class="box">
+            <h3>category</h3>
+            <a href="#"> <i class="fas fa-arrow-right"></i> Featured </a>
+            <a href="#"> <i class="fas fa-arrow-right"></i> Best seller </a>
+            <a href="#"> <i class="fas fa-arrow-right"></i> New arrivals </a>
+        </div>
+
+        <div class="box">
+            <h3>quick links</h3>
+            <a href="#"> <i class="fas fa-arrow-right"></i> Home </a>
+            <a href="#"> <i class="fas fa-arrow-right"></i> Products </a>
+            <a href="#"> <i class="fas fa-arrow-right"></i> Featured </a>
+            <a href="#"> <i class="fas fa-arrow-right"></i> Review </a>
+            <a href="#"> <i class="fas fa-arrow-right"></i> Contact </a>
+        </div>
+
+        <div class="box">
+            <h3>extra links</h3>
+            <a href="#"> <i class="fas fa-arrow-right"></i> my order </a>
+            <a href="#"> <i class="fas fa-arrow-right"></i> my account </a>
+            <a href="#"> <i class="fas fa-arrow-right"></i> new offers </a>
+        </div>
+
+    </div>
+
+    <div class="share">
+        <a href="#" class="fab fa-facebook-f"></a>
+        <a href="#" class="fab fa-twitter"></a>
+        <a href="#" class="fab fa-instagram"></a>
+    </div>
+
+    <div class="credit"> &copy; copyright @ 2023</span> </div>
+    
+</section>
+
+<!-- footer section ends -->
+
+
+
+
+
+
+<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+<!-- custom js file link -->
+<script src="script.js"></script>
+
+</body>
+</html>
